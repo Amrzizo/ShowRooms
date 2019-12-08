@@ -1,0 +1,116 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/selected_car_img"
+        android:layout_width="0dp"
+        android:layout_height="250dp"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/backgrounds/scenic[15]" />
+
+    <ImageView
+        android:id="@+id/interior_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintBottom_toBottomOf="@+id/selected_car_img"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@mipmap/interior" />
+
+    <ImageView
+        android:id="@+id/exterior_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintBottom_toBottomOf="@+id/selected_car_img"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/interior_image"
+        app:srcCompat="@mipmap/exterior" />
+
+    <TextView
+        android:id="@+id/exterior_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Exterior"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/exterior_image"
+        app:layout_constraintStart_toStartOf="@+id/exterior_image"
+        app:layout_constraintTop_toBottomOf="@+id/exterior_image" />
+
+    <TextView
+        android:id="@+id/interior_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Interior"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/interior_image"
+        app:layout_constraintStart_toStartOf="@+id/interior_image"
+        app:layout_constraintTop_toBottomOf="@+id/interior_image" />
+
+    <TextView
+        android:id="@+id/car_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/interior_image"
+        app:layout_constraintStart_toEndOf="@+id/exterior_image"
+        app:layout_constraintTop_toTopOf="@+id/exterior_image" />
+
+    <TextView
+        android:id="@+id/models_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="29dp"
+        android:layout_marginLeft="29dp"
+        android:layout_marginTop="24dp"
+        android:text="Models"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="@+id/exterior_text"
+        app:layout_constraintStart_toStartOf="@+id/selected_car_img"
+        app:layout_constraintTop_toBottomOf="@+id/selected_car_img" />
+
+    <TextView
+        android:id="@+id/model_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="@+id/models_text"
+        app:layout_constraintEnd_toEndOf="@+id/interior_image"
+        app:layout_constraintTop_toTopOf="@+id/models_text" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/models_text" />
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

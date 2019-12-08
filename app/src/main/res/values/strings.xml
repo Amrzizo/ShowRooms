@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">ShowRooms</string>
+    <string name="app_name">ShowRoomz</string>
+    <string name="str_kwd_txt"> KWD</string>
+
 </resources>
